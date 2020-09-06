@@ -1,0 +1,48 @@
+ <html>
+ 	<head>
+		<meta charset="UTF-8">
+ 		<title>Cats are happiness</title>
+ 	</head>
+ 	<body>
+ 		<div class="container">
+			<h1 id="state">The cat is currently: present</h1>
+			<button onclick="toggle()" class="toggle">Toggle cat state</button> 
+			<img id="output" src="happy.jpg" width="500">
+		</div>
+ 	</body>
+ </html>
+
+ <style type="text/css">
+ 	h1 {
+ 		text-align: center;
+ 	}
+
+ 	.container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		border: 3px solid green; 
+	}
+ 	
+ 	button {
+ 		margin: 10%;
+ 		width: 100px;
+ 	}
+ </style>
+
+ <script type="text/javascript">
+ 	var state = "present";
+ 	var emotion = "happy"
+ 	function toggle() {
+ 		if (state === "present") {
+ 			state = "absent"
+ 			emotion = "sad"
+ 		} else {
+ 			state = "present"
+ 			emotion = "happy"
+ 		};
+ 		document.getElementById("state").innerHTML = "The cat is currently: " + state;
+ 		document.getElementById("output").src = emotion+".jpg";
+ 	}
+ </script>
